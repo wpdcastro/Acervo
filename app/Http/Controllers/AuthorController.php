@@ -55,6 +55,7 @@ class AuthorController extends Controller
     public function destroy($id)
     {
         $this->author->find($id)->delete();
+
         return redirect("authors");
     }
 

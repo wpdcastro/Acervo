@@ -24,8 +24,6 @@ class BookController extends Controller
     {
         $books = $this->book->all();
 
-        //$publisher = $this->publisher->find($book->publisher_id);
-
         return view("books.index", ["books" => $books]);
 
     }
@@ -33,7 +31,9 @@ class BookController extends Controller
     public function create()
     {
         $publishers = $this->publisher->all();
+
         $authors = $this->author->all();
+
         return view("books.create",  ["publishers" => $publishers, "authors" => $authors]);
     }
 
